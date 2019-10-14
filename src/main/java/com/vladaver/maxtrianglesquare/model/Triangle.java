@@ -21,17 +21,11 @@ public class Triangle{
     public double getSquare(){
         double p = (ab + bc + ac) / 2;
         double square = Math.sqrt(p * (p-ab) * (p-bc) * (p-ac));
-
         return square;
     }
 
     public boolean isIsosceles(){
         if ((ab == bc) || (ab == ac) || (bc == ac)) return true;
-        return false;
-    }
-
-    public boolean isExist(){
-        if( (ab + bc >= ac) && (ab + ac >= bc) && (ac + bc >= ab)) return true;
         return false;
     }
 }
