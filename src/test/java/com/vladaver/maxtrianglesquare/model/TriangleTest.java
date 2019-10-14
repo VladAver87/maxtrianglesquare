@@ -10,7 +10,7 @@ public class TriangleTest {
 
     @Test
     public void testSquare(){
-        Assert.assertEquals(48.0, triangle.square(), 0);
-        Assert.assertEquals(7.5, triangle2.square(), 0);
+        Assert.assertEquals(48.0, triangle.getSquare(), 0);
+        Assert.assertEquals(7.5, triangle2.getSquare(), 0);
     }
 }

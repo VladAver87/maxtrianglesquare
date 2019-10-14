@@ -1,18 +1,37 @@
 package com.vladaver.maxtrianglesquare.model;
 
-import lombok.AllArgsConstructor;
 
-@AllArgsConstructor
-public class Triangle implements Shape {
+public class Triangle{
     private Point a;
     private Point b;
     private Point c;
+    private double ab;
+    private double bc;
+    private double ac;
 
-    public double square(){
-        double square = (((b.getX() - a.getX())*(c.getY() - a.getY())) - ((c.getX() - a.getX())*(b.getY() - a.getY()))) / 2;
-        if (square < 0){
-            return square * (-1);
-        }
+    public Triangle(Point a, Point b, Point c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.ab = a.distanceTo(b);
+        this.bc = b.distanceTo(c);
+        this.ac = a.distanceTo(c);
+    }
+
+    public double getSquare(){
+        double p = (ab + bc + ac) / 2;
+        double square = Math.sqrt(p * (p-ab) * (p-bc) * (p-ac));
+
         return square;
+    }
+
+    public boolean isIsosceles(){
+        if ((ab == bc) || (ab == ac) || (bc == ac)) return true;
+        return false;
+    }
+
+    public boolean isExist(){
+        if( (ab + bc >= ac) && (ab + ac >= bc) && (ac + bc >= ab)) return true;
+        return false;
     }
 }
