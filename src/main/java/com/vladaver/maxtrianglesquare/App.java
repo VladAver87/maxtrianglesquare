@@ -19,7 +19,7 @@ public class App {
         int linesCounter = 0;
         double maxSquare = -1;
         double square = -1;
-        String resultLine = null;
+        String resultLine = "";
         Double[] points;
         try {
             Scanner scanner = new Scanner(input);

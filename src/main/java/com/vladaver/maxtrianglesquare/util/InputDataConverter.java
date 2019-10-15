@@ -1,9 +1,7 @@
 package com.vladaver.maxtrianglesquare.util;
 
 import com.vladaver.maxtrianglesquare.exception.TriangleSquareException;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class InputDataConverter {
 
     public Double[] convert(String line) throws TriangleSquareException {
@@ -14,7 +12,7 @@ public class InputDataConverter {
             try {
                 points[i] = Double.valueOf(lineSplit[i]);
             }catch (NumberFormatException e){
-                log.error(e.getMessage());
+                System.out.println("Bad input argument " + e.getMessage() + " in element: " + i);
             }
         }
         for (Double p : points) {
