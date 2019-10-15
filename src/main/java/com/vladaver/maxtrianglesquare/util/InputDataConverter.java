@@ -8,7 +8,7 @@ public class InputDataConverter {
 
     public Double[] convert(String line) throws TriangleSquareException {
         String[] lineSplit = line.split(" ");
-        if (lineSplit.length < 6) throw new TriangleSquareException("Not enough  arguments in line: ");
+        if (lineSplit.length < 6) throw new TriangleSquareException("Not enough arguments in line: ");
         Double[] points = new Double[lineSplit.length];
         for (int i = 0; i < lineSplit.length; i++) {
             try {
