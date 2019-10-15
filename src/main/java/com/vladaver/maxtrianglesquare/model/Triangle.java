@@ -1,6 +1,8 @@
 package com.vladaver.maxtrianglesquare.model;
 
 
+import com.vladaver.maxtrianglesquare.exception.TriangleSquareException;
+
 public class Triangle{
     private Point a;
     private Point b;
@@ -9,10 +11,10 @@ public class Triangle{
     private double bc;
     private double ac;
 
-    public Triangle(Point a, Point b, Point c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    public Triangle(Double[] points) throws TriangleSquareException {
+        this.a = new Point(points[0], points[1]);
+        this.b = new Point(points[2], points[3]);
+        this.c = new Point(points[4], points[5]);
         this.ab = a.distanceTo(b);
         this.bc = b.distanceTo(c);
         this.ac = a.distanceTo(c);
