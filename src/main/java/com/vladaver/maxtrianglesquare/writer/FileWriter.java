@@ -12,10 +12,8 @@ public class FileWriter implements Writer {
 
     @Override
     public void write() {
-        try {
-            PrintWriter writer = new PrintWriter(file);
+        try (PrintWriter writer = new PrintWriter(file)){
             writer.println(data);
-            writer.close();
             System.out.println("Successfully written to file: " + file.getName());
         } catch (FileNotFoundException e) {
             System.out.println("Error writing to file: " +  e.getMessage());

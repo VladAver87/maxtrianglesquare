@@ -12,11 +12,8 @@ public class InputDataConverter {
             try {
                 points[i] = Double.valueOf(lineSplit[i]);
             }catch (NumberFormatException e){
-                System.out.println("Bad input argument " + e.getMessage() + " in element: " + i);
+                throw new TriangleSquareException("Error parsing arguments in line: ");
             }
-        }
-        for (Double p : points) {
-            if (p == null) throw new TriangleSquareException("Error parsing arguments in line: ");
         }
         return points;
     }
