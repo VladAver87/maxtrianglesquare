@@ -1,6 +1,5 @@
 package com.vladaver.maxtrianglesquare.model;
 
-
 import com.vladaver.maxtrianglesquare.exception.TriangleSquareException;
 
 public class Triangle{

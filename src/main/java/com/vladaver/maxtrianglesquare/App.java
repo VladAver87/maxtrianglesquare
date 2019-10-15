@@ -5,7 +5,6 @@ import com.vladaver.maxtrianglesquare.model.Triangle;
 import com.vladaver.maxtrianglesquare.util.InputDataConverter;
 import com.vladaver.maxtrianglesquare.writer.FileWriter;
 import com.vladaver.maxtrianglesquare.writer.Writer;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
